@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>RegEx Form</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			font-family: 'Courier New', Courier, monospace;
+			height: 100vh;
+			width: 100%;
+			font-family: arial;
+			color: #333;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			background-color: rgb(70, 110, 90);
+		}
+
+		h1 {
+			text-transform: uppercase;
+			font-weight: normal;
+			margin: 20px auto;
+			text-align: center;
+		}
+
+		form {
+			width: 500px;
+			margin: 20px auto;
+		}
+
+		input {
+			display: block;
+			padding: 8px 16px;
+			font-size: 2em;
+			margin: 10px auto;
+			width: 100%;
+			box-sizing: border-box;
+			border-radius: 10px;
+			border: 3px solid #ccc;
+			outline: none !important;
+		}
+
+		label {
+			color: rgb(158, 153, 153);
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Simple validate form build on RegExp</h1>
+	<form>
+
+		<input id="i1" type="text" name="username" placeholder="username" autocomplete="off">
+		<label for="i1">Username must be and contain 5 - 12 characters</label>
+
+		<input id="i2" type="text" name="email" placeholder="email" autocomplete="off">
+		<label for="i2">Email must be a valid address, e.g. me@mydomain.com</label>
+
+		<input id="i3" type="text" name="password" placeholder="password" autocomplete="off">
+		<label for="i3">Password must alphanumeric (@, _ and - are also allowed) and be 8 - 20 characters</label>
+
+		<input id="i4" type="text" name="telephone" placeholder="telephone" autocomplete="off">
+		<label for="i4">Telephone must be a valid telephone number (10 digits)</label>
+
+		<input id="i5" type="text" name="slug" placeholder="profile slug" autocomplete="off">
+		<label for="i5">Slug must contain only lowercase letters, numbers and hyphens and be 8 - 20 characters</label>
+
+	</form>
+
+	<script src="/js.js"></script>
+</body>
+
+</html>
