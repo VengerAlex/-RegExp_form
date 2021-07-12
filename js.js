@@ -1,4 +1,9 @@
 const inputs = document.querySelectorAll('input');
+const label = document.querySelectorAll('label');
+
+// label.forEach(el => {
+// 	el.style.display = 'none';
+// })
 
 const patterns = {
 	telephone: /^\d{10}$/,

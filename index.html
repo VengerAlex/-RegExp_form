@@ -26,6 +26,8 @@
 			font-weight: normal;
 			margin: 20px auto;
 			text-align: center;
+			color: #fff;
+			font-size: 25px;
 		}
 
 		form {
@@ -45,16 +47,26 @@
 			outline: none !important;
 		}
 
-		label {
-			color: rgb(158, 153, 153);
-		}
-
 		input.valid {
 			border-color: #36cc36;
 		}
 
 		input.invalid {
 			border-color: #ffa600;
+		}
+
+		input+label {
+			color: #ffa600;
+			margin: 0 15px;
+			opacity: 0;
+			height: 0;
+		}
+
+		input.invalid+label {
+			opacity: 1;
+			height: 0;
+			margin-bottom: 20px;
+			color: #ffa600;
 		}
 	</style>
 </head>
@@ -64,7 +76,8 @@
 	<form autocomplete="off">
 
 		<input id="i1" type="text" name="username" placeholder="username">
-		<label for="i1">Username must be alphanumeric and contain 5 - 12 characters</label>
+		<label>Username must be alphanumeric and contain 5 - 12 characters</label>
+		<!-- <label for="i1">Username must be alphanumeric and contain 5 - 12 characters</label> -->
 
 		<input id="i2" type="text" name="email" placeholder="email" autocomplete="off">
 		<label for="i2">Email must be a valid address, e.g. me@mydomain.com</label>
