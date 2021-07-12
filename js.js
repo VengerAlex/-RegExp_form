@@ -1,10 +1,6 @@
 const inputs = document.querySelectorAll('input');
 const label = document.querySelectorAll('label');
 
-// label.forEach(el => {
-// 	el.style.display = 'none';
-// })
-
 const patterns = {
 	telephone: /^\d{10}$/,
 	username: /^[a-z\d]{5,12}$/i,
@@ -23,56 +19,3 @@ inputs.forEach(el => {
 		validateFunc(e.target, patterns[e.target.attributes.name.value]);
 	});
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const inputs = document.querySelectorAll('input');
-
-
-// const patterns = {
-// 	telephone: /^\d{10}$/,
-// 	slug: /^([a-z0-9]-){11-20}$/,
-// };
-
-// const validateFunc = (field, regEx) => {
-	// console.log(regEx.test(field.value));
-
-// 	if (regEx.test(field.value)) {
-// 		field.className = 'valid'
-// 	} else {
-// 		field.className = 'ivalid'
-// 	}
-// }
-
-// inputs.forEach(input => {
-// 	input.addEventListener('keyup', (e) => {
-// 		// console.log(e.target.attributes.name.value);
-
-// 		validateFunc(e.target, patterns[e.target.attributes.name.value]);
-// 	})
-// })
